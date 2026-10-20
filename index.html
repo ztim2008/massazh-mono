@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Массаж в городе — мастера и онлайн-запись | Прототип</title>
+<meta name="description" content="Прототип сайта массажа: карточки мастеров, цены, онлайн-запись. Все данные примерные.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержанию</a>
+<header class="nav">
+  <a class="logo" href="#top">Массаж<span>.</span></a>
+  <button class="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="menu">Меню</button>
+  <nav id="menu" class="menu" aria-label="Основная навигация">
+    <a href="#masters">Мастера</a><a href="#services">Цены</a><a href="#booking">Запись</a><a href="#contacts">Контакты</a>
+    <a class="tel" href="tel:+79000000000">+7 (900) 000-00-00</a>
+  </nav>
+</header>
+<main id="main">
+<section class="hero lines" id="top">
+  <p class="mono">Ваш город · Массажный кабинет · с 2014</p>
+  <h1>МАССАЖ</h1>
+  <div class="rule" aria-hidden="true"><span></span></div>
+  <div class="hero-row">
+    <p class="lead">Восемь мастеров. Одна цель — чтобы вам стало легче. Выберите специалиста и запишитесь за минуту.</p>
+    <a class="btn" href="#masters">Выбрать мастера →</a>
+  </div>
+</section>
+<hr class="thick">
+<section class="section" id="masters">
+  <div class="head"><p class="mono">01 — Мастера</p><h2>Выберите своего мастера</h2></div>
+  <div class="grid" id="grid"></div>
+</section>
+<hr class="thick">
+<section class="section" id="services">
+  <div class="head"><p class="mono">02 — Цены</p><h2>Услуги</h2></div>
+  <ul class="prices" id="prices"></ul>
+</section>
+<section class="stats" aria-label="Цифры">
+  <div><b>12</b><span>лет работы</span></div>
+  <div><b>8</b><span>мастеров</span></div>
+  <div><b>4,9</b><span>средний рейтинг</span></div>
+  <div><b>9–21</b><span>ежедневно</span></div>
+</section>
+<section class="section" id="booking">
+  <div class="head"><p class="mono">03 — Запись</p><h2>Запись на приём</h2></div>
+  <form id="form" class="form" novalidate>
+    <label>Услуга<select name="service" id="fService"></select></label>
+    <label>Мастер<select name="master" id="fMaster"></select></label>
+    <label>Дата<input type="date" name="date" id="fDate" required></label>
+    <fieldset><legend>Время</legend><div id="slots" class="slots"></div></fieldset>
+    <label>Имя<input name="name" autocomplete="name" required placeholder="Анна"></label>
+    <label>Телефон<input type="tel" name="phone" autocomplete="tel" required placeholder="+7 (___) ___-__-__"></label>
+    <p class="err" id="err" role="alert"></p>
+    <button class="btn wide" type="submit">Отправить заявку →</button>
+    <p class="mono small">Администратор перезвонит для подтверждения.</p>
+  </form>
+  <div class="done" id="done" hidden tabindex="-1">
+    <p class="mono">Заявка принята</p><h3 id="doneT">Спасибо!</h3><p id="doneP"></p>
+    <button class="btn ghost" id="again" type="button">Новая запись</button>
+  </div>
+</section>
+<hr class="thick">
+<section class="section quote">
+  <p class="mono">04 — Отзыв</p>
+  <blockquote><p>«Лучший массаж спины в городе. Без лишних слов — просто работает.»</p><footer class="mono">— Марина, постоянный гость</footer></blockquote>
+</section>
+<hr class="thick">
+<section class="section" id="contacts">
+  <div class="head"><p class="mono">05 — Контакты</p><h2>Контакты</h2></div>
+  <div class="contacts">
+    <div><p class="mono">Адрес</p><p>Ваш город, ул. Примерная, 1</p></div>
+    <div><p class="mono">Часы</p><p>Ежедневно 9:00–21:00</p></div>
+    <div><p class="mono">Телефоны</p><p><a href="tel:+79000000000">+7 (900) 000-00-00</a><br><a href="tel:+79000000099">+7 (900) 000-00-99</a></p></div>
+  </div>
+</section>
+</main>
+<footer class="foot"><span>© 2026 Массаж. Ваш город</span><span class="mono">Прототип · данные примерные · фото Unsplash</span></footer>
+<script src="app.js"></script>
+</body>
+</html>
