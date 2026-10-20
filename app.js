@@ -2,19 +2,19 @@
 const U=id=>`https://images.unsplash.com/${id}?w=600&h=750&fit=crop&q=70`;
 const MASTERS=[
  {id:'elena',name:'Елена Соколова',spec:'Классический массаж',exp:12,rating:4.9,from:2500,phone:'+7 (900) 000-00-01',img:U('photo-1544005313-94ddf0286df2'),top:true},
- {id:'dmitry',name:'Дмитрий Орлов',spec:'Спортивный массаж',exp:9,rating:4.9,from:3000,phone:'+7 (900) 000-00-02',img:U('photo-1500648767791-00dcc994a43e')},
+ {id:'daria',name:'Дарья Орлова',spec:'Спортивный массаж',exp:9,rating:4.9,from:3000,phone:'+7 (900) 000-00-02',img:U('photo-1580489944761-15a19d654956')},
  {id:'anna',name:'Анна Белова',spec:'Релакс-массаж',exp:7,rating:4.8,from:2800,phone:'+7 (900) 000-00-03',img:U('photo-1494790108377-be9c29b29330')},
- {id:'sergey',name:'Сергей Ветров',spec:'Массаж спины и шеи',exp:15,rating:5.0,from:2200,phone:'+7 (900) 000-00-04',img:U('photo-1507003211169-0a1dd7228f2d')},
+ {id:'svetlana',name:'Светлана Ветрова',spec:'Массаж спины и шеи',exp:15,rating:5.0,from:2200,phone:'+7 (900) 000-00-04',img:U('photo-1524504388940-b1c1722653e1')},
  {id:'olga',name:'Ольга Миронова',spec:'Лимфодренажный',exp:8,rating:4.8,from:3200,phone:'+7 (900) 000-00-05',img:U('photo-1438761681033-6461ffad8d80')},
  {id:'maria',name:'Мария Лебедева',spec:'Массаж лица',exp:6,rating:4.9,from:2700,phone:'+7 (900) 000-00-06',img:U('photo-1534528741775-53994a69daeb')},
- {id:'ivan',name:'Иван Громов',spec:'Глубокотканный массаж',exp:11,rating:4.7,from:3400,phone:'+7 (900) 000-00-07',img:U('photo-1506794778202-cad84cf45f1d')},
- {id:'tatiana',name:'Татьяна Ким',spec:'Стоун-терапия',exp:10,rating:4.9,from:3600,phone:'+7 (900) 000-00-08',img:U('photo-1573496359142-b8d87734a5a2')},
+ {id:'irina',name:'Ирина Громова',spec:'Глубокотканный массаж',exp:11,rating:4.7,from:3400,phone:'+7 (900) 000-00-07',img:U('photo-1529626455594-4ff0802cfb7e')},
+ {id:'tatiana',name:'Татьяна Ким',spec:'Стоун-терапия',exp:10,rating:4.9,from:3600,phone:'+7 (900) 000-00-08',img:U('photo-1488426862026-3ee34a7d66df')},
 ];
 const SERVICES=[['Классический массаж','60 мин',3500],['Массаж спины','40 мин',2200],['Шейно-воротниковая зона','30 мин',1800],['Спортивный массаж','60 мин',3800],['Лимфодренажный массаж','60 мин',3600],['Массаж лица','40 мин',2700]];
 const SLOTS=['10:00','11:30','13:00','14:30','16:00','17:30','19:00'];
 const $=s=>document.querySelector(s),rub=n=>n.toLocaleString('ru-RU')+' ₽',tel=p=>'tel:+'+p.replace(/\D/g,'');
 $('#grid').innerHTML=MASTERS.map(m=>`<article class="card">
- <div class="ph"><img src="${m.img}" alt="Массажист ${m.name}" loading="lazy" width="600" height="750"></div>
+ <div class="ph"><img src="${m.img}" alt="Массажистка ${m.name}" loading="lazy" width="600" height="750"></div>
  <div class="body">${m.top?'<span class="badge">Выбор гостей</span>':''}
   <span class="spec">${m.spec} · ${m.exp} лет</span><h3>${m.name}</h3>
   <div class="row"><span>★ ${m.rating.toFixed(1).replace('.',',')}</span><span class="price"><small>от </small>${rub(m.from)}</span></div>
